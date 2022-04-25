@@ -32,8 +32,8 @@ body {
   display: flex;
   min-width: 600px;
   margin: 0;
-  background-color: #43A047;
-  color: rgba(255, 255, 255, 0.8);
+  background-color: #2E7034;
+  color: rgba(255, 255, 255, 0.95);
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -42,7 +42,7 @@ body {
   min-width: 300px;
   position: relative;
   padding: 2em;
-  background-color: #43A047;
+  background-color: #2E7034;
   font-size: 15px;
 }
 
@@ -66,10 +66,10 @@ pre {
 
 code {
   padding: 0 2px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   font-family: 'Source Code Pro', monospace;
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.95);
   white-space: nowrap;
 }
 
@@ -78,7 +78,7 @@ li {
 }
 
 a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 a:hover {
@@ -198,14 +198,14 @@ pre {
   font-family: 'Source Code Pro', monospace;
   font-size: 16px;
   line-height: 1.5;
-  color: #777;
+  color: #6b6b6b;
 }
 
 #css {
   height: 260px;
   position: relative;
   padding: 10px 10px 10px 40px;
-  background-color: #e0e0e0;
+  background-color: #f0f0f0;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -217,8 +217,8 @@ pre {
   height: 100%;
   padding: 10px 6px;
   text-align: right;
-  background-color: #999;
-  color: #D5D5D5;
+  background-color: #6b6b6b;
+  color: #ededed;
 }
 
 #code {
@@ -293,7 +293,7 @@ pre {
 .arrow {
   float: left;
   height: 30px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 #level-indicator {
@@ -405,7 +405,7 @@ button:not(.disabled):hover {
 }
 
 #next.disabled {
-  opacity: 0.5;
+  background-color: #6b6b6b;
 }
 
 .credits {
@@ -413,7 +413,7 @@ button:not(.disabled):hover {
   line-height: 1.5em;
   text-align: center;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 #settings {
@@ -423,9 +423,9 @@ button:not(.disabled):hover {
 .toggle {
   display: inline-block;
   padding: 1px 8px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.95);
   cursor: pointer;
   user-select: none;
 }
