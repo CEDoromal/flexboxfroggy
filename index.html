@@ -14,8 +14,6 @@
     <meta name="twitter:title"        content="Flexbox Froggy">
     <meta name="twitter:description"  content="A game for learning CSS flexbox">
     <meta name="twitter:image"        content="https://flexboxfroggy.com/images/screenshot.png">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans|Fredoka+One|Source+Code+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -221,6 +219,24 @@
         });
       }
     })();
+    </script>
+	
+	<noscript id="deferred-styles">
+	  <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+      <link href='https://fonts.googleapis.com/css?family=PT+Sans|Fredoka+One|Source+Code+Pro' rel='stylesheet' type='text/css'>
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
     </script>
   </body>
 </html>
