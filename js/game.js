@@ -175,7 +175,6 @@ var game = {
     $(window).on('beforeunload', function() {
       game.saveAnswer();
       localStorage.setItem('level', game.level);
-      localStorage.setItem('answers', JSON.stringify(game.answers));
       localStorage.setItem('solved', JSON.stringify(game.solved));
       localStorage.setItem('colorblind', JSON.stringify(game.colorblind));
     }).on('hashchange', function() {
@@ -199,13 +198,21 @@ var game = {
   },
 
   prev: function() {
+	game.saveAnswer();
+    	
     this.level--;
 
     var levelData = levels[this.level];
     this.loadLevel(levelData);
+	
+	localStorage.setItem('level', game.level);
+    localStorage.setItem('solved', JSON.stringify(game.solved));
+    localStorage.setItem('colorblind', JSON.stringify(game.colorblind));
   },
 
   next: function() {
+	game.saveAnswer();
+    	
     if (this.difficulty === "hard") {
       this.level = Math.floor(Math.random()* levels.length)
     } else {
@@ -214,6 +221,10 @@ var game = {
 
     var levelData = levels[this.level];
     this.loadLevel(levelData);
+	
+	localStorage.setItem('level', game.level);
+    localStorage.setItem('solved', JSON.stringify(game.solved));
+    localStorage.setItem('colorblind', JSON.stringify(game.colorblind));
   },
 
   loadMenu: function() {
@@ -444,11 +455,14 @@ var game = {
       game.changed = true;
       $('#next').removeClass('animated animation').addClass('disabled');
     }
+	
+	game.saveAnswer();
   },
 
   saveAnswer: function() {
     var level = levels[this.level];
     game.answers[level.name] = $('#code').val();
+	localStorage.setItem('answers', JSON.stringify(game.answers));
   },
 
   tryagain: function() {

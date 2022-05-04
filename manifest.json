@@ -2,7 +2,7 @@
   "name": "Flexbox Froggy",
   "theme_color": "#193c1c",
   "background_color": "#2e7034",
-  "display": "fullscreen",
+  "display": "standalone",
   "start_url": "/",
   "icons": [
 	  {
