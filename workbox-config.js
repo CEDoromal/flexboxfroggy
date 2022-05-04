@@ -1,9 +1,14 @@
 module.exports = {
 	globDirectory: './',
 	globPatterns: [
-		'**/*.{css,ico,png,jpg,svg,webp,html,js,json}'
+		'**/*.{ico,png,jpg,svg,webp,html}',
+		'js/*',
+		'css/*',
+		'node_modules/jquery/dist/jquery.min.js',
+		'node_modules/animate.css/animate.min.css',
+		'manifest.json'
 	],
-	globIgnores: ['firebase.json'],
+	globIgnores: [],
 	swDest: 'sw.js',
 	ignoreURLParametersMatching: [
 		/^utm_/,
